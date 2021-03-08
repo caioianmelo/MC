@@ -1,0 +1,57 @@
+\documentclass{article}
+\usepackage[shortlabels]{enumitem}
+\usepackage{graphicx}
+\usepackage{minted}
+\graphicspath{{$HOME/texdefaults/images}}
+
+\begin{document}
+
+\input{title_ufpe}
+
+\section{}
+	\begin{enumerate}[a)]
+		\item \mbox{}
+			\begin{minted}[mathescape, linenos, frame=lines, framesep=2mm, numbersep=5pt, breaklines]{c}
+// Ordenação de um vetor de inteiros por seleção, onde $r = N$
+void ord_selecao(int *v, int r) {
+	int i, j, s;
+				
+	for(i = 0; i < r; ++i) {
+		for(j = 0; j < r; ++j) {
+			if(v[j] < v[i]) {
+				s = v[i];
+				v[i] = v[j];
+				v[j] = s;
+			}
+		}
+	}
+}
+			\end{minted}
+			Independente do vetor estar parcialmente ordenado, cada elemento faz $N^2 = 64$ comparações(podendo ser marginalmente melhorado se ``pularmos'' a comparação com o elemento do mesmo índice). Já a quantidade de trocas $T = 2$
+		\item \mbox{}
+			\begin{minted}[mathescape, linenos, frame=lines, framesep=2mm, numbersep=5pt, breaklines]{c}
+// Ordenação de um vetor de inteiros por inserção, onde $max = N$ e $b$ é umbooleano  para garantir que apenas a primeira recursão varrerá o vetor inteiro.
+void ord_ins(int *v, int r, int max, int b) {
+	int s;
+
+	if( (r - 1) >= 0 && (v[r-1] > v[r]) ) {
+		s = v[r];
+		v[r] = v[r-1];
+		v[r-1] = s;
+		++t;
+		if(r+1 < max) ord_ins(v, r+1, max, 1);
+	}
+	if(b == 0 && r > 0) ord_ins(v, r-1, max, b);
+	++c;
+}
+			\end{minted}
+			Foram feitas $C = 8$ comparações e $T = 2$ trocas para o vetor dado.
+
+	\end{enumerate}
+\section{}
+	\begin{enumerate}[a)]
+		\item Inicialmente um vetor de $N = 100$ é inicializado com valores aleatórios de $[0; 10 \cdot N)$, após isso envia-se o vetor para ser ordenado or seleção, onde faz-se uma cópia na memória dos valores do vetor anterior; dentro do laço, à cada iteração, procura-se a posição no vetor de menor índice em relação ao pivô ``i'' e assim, faz-se o swap dele com o valor no pivô(mesmo que esse valor seja o pivô em si), e após isso soma-se a quantidade de comparações com o valor prèvio e repete-se até o valor $n - 1$ e o valor de comparações é igual ao total de comparações feitas. Após isso é imprimido o vetor ordenado resultante.
+	Nas inserções, faz-se praticamente o mesmo que acima, porém, com menos comparações pois não é necessário verificar valores anteriores a não ser que hajam trocas de posições.
+	\end{enumerate}
+
+\end{document}
