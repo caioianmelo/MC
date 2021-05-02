@@ -18,17 +18,24 @@ void swapi(int *a, int *b) {
 	(*b) = c;
 }
 
+int find_min(int *v, int p, int s) {
+	int i, m = p;
+
+	for(i = p; i < s; ++i) {
+		if(v[m] > v[i]) m = i;
+		++cs;
+	}
+
+	return m;
+}
+
 void ord_sel(int *v, int r) {
-	int i, j;
+	int i, j, m;
 
 	for(i = 0; i < r; ++i) {
-		for(j = 0; j < r; ++j) {
-			if(v[i] > v[j] && i < j) { 
-				swapi(&v[j], &v[i]); 
-				++ts;
-			}
-			++cs;
-		}
+		m = find_min(v, i, r);
+		swapi (&v[i], &v[m]);
+		++ts;
 	}
 }
 

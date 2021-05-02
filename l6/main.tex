@@ -53,9 +53,9 @@ void ord_ins(int *v, int r, int max, int b) {
 	\end{enumerate}
 \section{}
 	\begin{enumerate}[a)]
-		\item Inicialmente, um vetor de $N = 100$ é inicializado com valores aleatórios com valores compreendidos entre $[0; 10 \cdot N)$, após isso envia-se o vetor para ser ordenado por seleção, onde faz-se uma cópia na memória dos valores do vetor anterior; dentro do laço, à cada iteração, procura-se a posição no vetor no menor índice em relação ao pivô na posição ``i'' e caso ínfero faz-se a troca entre eles; no final soma-se a quantidade de comparações com o valor prèvio e repete-se até o valor $N - 1$. Após a rotina, imprime-se o vetor ordenado resultante.
+		\item Inicialmente, um vetor de $N = 100$ é inicializado com valores aleatórios com valores compreendidos entre $[0; 10 \cdot N)$, após isso envia-se o vetor para ser ordenado por seleção, onde faz-se uma cópia na memória dos valores do vetor anterior; dentro do laço, à cada iteração, procura-se a posição no vetor no menor índice em relação ao pivô na posição ``i'' e caso ínfero ou igual, faz-se a troca entre eles; no final soma-se a quantidade de comparações com o valor prévio e repete-se até o valor $N - 1$. Após a rotina, imprime-se o vetor ordenado resultante.
 		Nas inserções, faz-se ordenamento por inserções(com outra cópia do vetor inicial) que também percorre o vetor de forma linear, porém, com menos comparações pois não é necessário verificar valores anteriores a não ser que hajam trocas de posições.
-\item[d)] Como podemos ver da primeira questão é inegável a quantidade de comparações feitas entre a ordenação por inserção em comparação com a de seleção, sendo esta muito mais lenta quando o vetor está parcialmente ordenado mesmo que a quantidade de trocas seja inferior(no sentido quantitativo) na ordenação por seleção.
+	\item[d)] A quantidade de comparações feitas entre a ordenação por inserção é menor que a de seleção, porém, com algumas melhoras podemos diminuir o número de comparações na seleção, sendo no algorítmo dado igual a $T = \frac{N(N+1)}{2}$ e procurando-se pelo menor índice nos gera N trocas.
 	\end{enumerate}
 
 \end{document}
