@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{// Ordenação de um vetor de inteiros por inserção do índice $(max,0)$, onde $max = N$ e $b$ é um booleano  para garantir que apenas a primeira recursão varrerá o vetor inteiro.}
+\PYG{k+kt}{void} \PYG{n+nf}{ord\PYGZus{}ins}\PYG{p}{(}\PYG{k+kt}{int} \PYG{o}{*}\PYG{n}{v}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{r}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{max}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{b}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+	\PYG{k+kt}{int} \PYG{n}{s}\PYG{p}{;}
+
+	\PYG{k}{if}\PYG{p}{(} \PYG{p}{(}\PYG{n}{r} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{)} \PYG{o}{\PYGZgt{}=} \PYG{l+m+mi}{0} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{p}{(}\PYG{n}{v}\PYG{p}{[}\PYG{n}{r}\PYG{l+m+mi}{\PYGZhy{}1}\PYG{p}{]} \PYG{o}{\PYGZgt{}} \PYG{n}{v}\PYG{p}{[}\PYG{n}{r}\PYG{p}{])} \PYG{p}{)} \PYG{p}{\PYGZob{}}
+		\PYG{n}{swapi}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{v}\PYG{p}{[}\PYG{n}{r}\PYG{l+m+mi}{\PYGZhy{}1}\PYG{p}{],} \PYG{o}{\PYGZam{}}\PYG{n}{v}\PYG{p}{[}\PYG{n}{r}\PYG{p}{]);}
+		\PYG{k}{if}\PYG{p}{(}\PYG{n}{r}\PYG{o}{+}\PYG{l+m+mi}{1} \PYG{o}{\PYGZlt{}} \PYG{n}{max}\PYG{p}{)} \PYG{n}{ord\PYGZus{}ins}\PYG{p}{(}\PYG{n}{v}\PYG{p}{,} \PYG{n}{r}\PYG{o}{+}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{max}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{);}
+	\PYG{p}{\PYGZcb{}}
+	\PYG{k}{if}\PYG{p}{(}\PYG{n}{b} \PYG{o}{==} \PYG{l+m+mi}{0} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{n}{r} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{0}\PYG{p}{)} \PYG{n}{ord\PYGZus{}ins}\PYG{p}{(}\PYG{n}{v}\PYG{p}{,} \PYG{n}{r}\PYG{l+m+mi}{\PYGZhy{}1}\PYG{p}{,} \PYG{n}{max}\PYG{p}{,} \PYG{n}{b}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

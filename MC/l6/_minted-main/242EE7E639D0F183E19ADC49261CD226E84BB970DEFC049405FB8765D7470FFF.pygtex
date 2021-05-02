@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{// Função para trocar os valores dados}
+\PYG{k+kt}{void} \PYG{n+nf}{swapi}\PYG{p}{(}\PYG{k+kt}{int} \PYG{o}{*}\PYG{n}{a}\PYG{p}{,} \PYG{k+kt}{int} \PYG{o}{*}\PYG{n}{b}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+	\PYG{k+kt}{int} \PYG{n}{c} \PYG{o}{=} \PYG{p}{(}\PYG{o}{*}\PYG{n}{a}\PYG{p}{);}
+	\PYG{p}{(}\PYG{o}{*}\PYG{n}{a}\PYG{p}{)} \PYG{o}{=} \PYG{p}{(}\PYG{o}{*}\PYG{n}{b}\PYG{p}{);}
+	\PYG{p}{(}\PYG{o}{*}\PYG{n}{b}\PYG{p}{)} \PYG{o}{=} \PYG{n}{c}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}
