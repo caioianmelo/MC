@@ -1,9 +1,0 @@
-Connection.cpp: In member function ‘void Connection::handleBattery()’:
-Connection.cpp:154:10: error: ‘bat_lvls’ was not declared in this scope; did you mean ‘batt_lvls’?
-  154 |   sum += bat_lvls.back;
-      |          ^~~~~~~~
-      |          batt_lvls
-Connection.cpp:155:3: error: ‘batlvls’ was not declared in this scope; did you mean ‘batt_lvls’?
-  155 |   batlvls.pop_back();
-      |   ^~~~~~~
-      |   batt_lvls
